@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VITAMORA – Pure Natural Health Products</title>
+<meta name="description" content="Premium Moringa Powder & Amla Powder | 100% Organic | No Chemicals | Direct from Farmers"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ▸ NAVBAR -->
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="#home" class="logo">
+      <span class="logo-icon"><img src="log.jpeg" height="50px" width="50px"></span>
+      <span class="logo-text">VITA<strong>MORA</strong></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     class="nl active">Home</a></li>
+      <li><a href="#about"    class="nl">About</a></li>
+      <li><a href="#products" class="nl">Products</a></li>
+      <li><a href="#reviews"  class="nl">Reviews</a></li>
+      <li><a href="#contact"  class="nl">Contact</a></li>
+      <li><a href="#benefits" class="nl">Benefits</a></li>
+    </ul>
+    <div class="nav-end">
+      <button class="cart-btn" id="cartBtn" aria-label="Cart">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="#products" class="btn-nav">Shop Now</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">✕</button>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="#products" class="drawer-shop">🛒 Shop Now</a>
+</div>
+<div class="drawer-mask" id="drawerMask"></div>
+
+<!-- ▸ CART SIDEBAR -->
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cs-head">
+    <h3>🛒 Your Cart</h3>
+    <button id="cartClose">✕</button>
+  </div>
+  <div class="cs-items" id="csItems">
+    <div class="cs-empty" id="csEmpty">Your cart is empty 🌿</div>
+  </div>
+  <div class="cs-foot" id="csFoot" style="display:none">
+    <div class="cs-total">Total: <strong id="csTotal">₹0</strong></div>
+    <a href="https://wa.me/917225906842?text=Hi%2C%20I%20want%20to%20order%20from%20Vitamora!" target="_blank" class="btn-whatsapp cs-wa">💬 Order via WhatsApp</a>
+    <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+<div class="cart-mask" id="cartMask"></div>
+
+<!-- ▸ HERO -->
+<section class="hero" id="home">
+  <!-- Slides -->
+  <div class="hero-slides">
+
+    <!-- Slide 1: Indian farmer working in field -->
+    <div class="hs hs1 active">
+      <div class="hs-bg"></div>
+      <div class="hs-media">
+        <img
+          src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80&auto=format&fit=crop"
+          alt="Indian farmer working in green agricultural field"
+          class="hs-img"
+          loading="eager"
+        />
+        <div class="hs-overlay"></div>
+      </div>
+      <div class="hs-cap">🌾 Kisan at Work – Organic Farmlands of India</div>
+    </div>
+
+    <!-- Slide 2: Lush green farm with natural sunlight -->
+    <div class="hs hs2">
+      <div class="hs-bg"></div>
+      <div class="hs-media">
+        <img
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80&auto=format&fit=crop"
+          alt="Lush green farm fields with natural golden sunlight"
+          class="hs-img"
+          loading="lazy"
+        />
+        <div class="hs-overlay"></div>
+      </div>
+      <div class="hs-cap">🌿 Lush Green Khet – Natural Sunlight, Pure Soil</div>
+    </div>
+
+    <!-- Slide 3: Moringa leaves close-up / handling -->
+    <div class="hs hs3">
+      <div class="hs-bg"></div>
+      <div class="hs-media">
+        <img
+          src="https://images.unsplash.com/photo-1611735341450-74d61e660ad2?w=1600&q=80&auto=format&fit=crop"
+          alt="Fresh moringa leaves being harvested by hand"
+          class="hs-img"
+          loading="lazy"
+        />
+        <div class="hs-overlay"></div>
+      </div>
+      <div class="hs-cap">🌿 Fresh Moringa Harvest – Straight from the Farm</div>
+    </div>
+
+    <!-- Slide 4: Farmer harvesting / rural India -->
+    <div class="hs hs4">
+      <div class="hs-bg"></div>
+      <div class="hs-media">
+        <img src="img.png.jpeg" height="1000px" width="1500px"/>
+        <div class="hs-overlay"></div>
+      </div>
+      <div class="hs-cap">🏡 Village Harvest – Direct from Farmers to You</div>
+    </div>
+
+  </div><!-- /slides -->
+
+  <div class="hero-body">
+    <div class="hero-eyebrow"><span class="edot"></span>From Farm to Your Home<span class="edot"></span></div>
+    <h1 class="hero-h1">Pure &amp; Natural<br/><em>Health Products 🌿</em></h1>
+    <p class="hero-sub">From Farm to Your Home</p>
+    <p class="hero-desc">Premium Moringa Powder &amp; Amla Powder<br/>100% Organic · No Chemicals · Direct from Farmers</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn btn-primary btn-lg">🛒 Shop Now</a>
+      <a href="#about"    class="btn btn-ghost   btn-lg">Learn More →</a>
+    </div>
+    <div class="hero-chips">
+      <span>🌿 100% Organic</span>
+      <span>🚜 Farm Fresh</span>
+      <span>🚫 No Chemicals</span>
+      <span>🔬 Lab Tested</span>
+    </div>
+  </div>
+
+  <button class="sarrow sprev" id="sPrev">&#8249;</button>
+  <button class="sarrow snext" id="sNext">&#8250;</button>
+  <div class="sdots" id="sDots">
+    <button class="sdot active" data-i="0"></button>
+    <button class="sdot" data-i="1"></button>
+    <button class="sdot" data-i="2"></button>
+    <button class="sdot" data-i="3"></button>
+  </div>
+  <div class="scroll-cue"><div class="sc-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- ▸ TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>✅ FSSAI Certified</span><span class="ts">·</span>
+    <span>🌿 100% Organic</span><span class="ts">·</span>
+    <span>🔬 Lab Tested</span><span class="ts">·</span>
+    <span>🚜 Direct from Farmers</span><span class="ts">·</span>
+    <span>🚚 Free Delivery ₹599+</span><span class="ts">·</span>
+    <span>⭐ 50,000+ Happy Customers</span><span class="ts">·</span>
+    <span>✅ FSSAI Certified</span><span class="ts">·</span>
+    <span>🌿 100% Organic</span><span class="ts">·</span>
+    <span>🔬 Lab Tested</span><span class="ts">·</span>
+    <span>🚜 Direct from Farmers</span><span class="ts">·</span>
+    <span>🚚 Free Delivery ₹599+</span><span class="ts">·</span>
+    <span>⭐ 50,000+ Happy Customers</span><span class="ts">·</span>
+  </div>
+</div>
+
+<!-- ▸ PRODUCTS -->
+<section class="section products-sec" id="products">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">🛒 Our Products</span>
+      <h2 class="sec-h2">Only Two. <em>Both Perfect.</em></h2>
+      <p class="sec-p">Cold-processed from certified organic farms. Maximum nutrition, zero compromise.</p>
+    </div>
+
+    <div class="prod-grid">
+
+      <!-- Moringa -->
+      <div class="prod-card reveal-l" data-id="moringa" data-name="Moringa Powder" data-price="250">
+        <img src="mori.png" height=300px width=450px/>
+        <div class="pc-body">
+          <div class="pc-top">
+            <h3>Moringa Powder</h3>
+            <div class="pc-qty">200g · Cold-Processed · Organic</div>
+            <div class="pc-stars">★★★★★ <span>(2,341)</span></div>
+          </div>
+          <p class="pc-desc">A nutrient-rich superfood with 92 nutrients and 46 antioxidants. Boosts immunity, energy, and overall wellness naturally.</p>
+          <div class="pc-benefits">
+            <div class="pb"><span>🛡️</span>Boost Immunity</div>
+            <div class="pb"><span>💊</span>Rich in Vitamins</div>
+            <div class="pb"><span>⚡</span>Energy Booster</div>
+          </div>
+          <div class="pc-price-row">
+            <div class="pc-price">₹250 <del>₹350</del></div>
+            <div class="pc-save">Save ₹100</div>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-primary add-cart" data-id="moringa" data-name="Moringa Powder" data-price="250">🛒 Add to Cart</button>
+            <button class="btn btn-outline buy-now" data-name="Moringa Powder" data-price="250">⚡ Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amla -->
+      <div class="prod-card reveal-r" data-id="amla" data-name="Amla Powder" data-price="280">
+        <img src="aml.jpg" height=300px width=450px/>
+        <div class="pc-body">
+          <div class="pc-top">
+            <h3>Amla Powder</h3>
+            <div class="pc-qty">200g · Sun-Dried · Organic</div>
+            <div class="pc-stars">★★★★★ <span>(1,876)</span></div>
+          </div>
+          <p class="pc-desc">20× more Vitamin C than oranges. Supports digestion, improves skin radiance, and strengthens hair from root to tip.</p>
+          <div class="pc-benefits">
+            <div class="pb"><span>💊</span>Vitamin C Rich</div>
+            <div class="pb"><span>💆</span>Hair &amp; Skin Care</div>
+            <div class="pb"><span>🌀</span>Improves Digestion</div>
+          </div>
+          <div class="pc-price-row">
+            <div class="pc-price amber-price">₹280 <del>₹380</del></div>
+            <div class="pc-save amber-save">Save ₹100</div>
+          </div>
+          <div class="pc-actions">
+            <button class="btn btn-amber add-cart" data-id="amla" data-name="Amla Powder" data-price="280">🛒 Add to Cart</button>
+            <button class="btn btn-outline-amber buy-now" data-name="Amla Powder" data-price="280">⚡ Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ▸ BENEFITS -->
+<section class="section benefits-sec" id="benefits">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">💚 Health Benefits</span>
+      <h2 class="sec-h2">Why These <em>Two Superfoods?</em></h2>
+    </div>
+    <div class="ben-grid">
+      <div class="ben-col reveal-l">
+        <div class="ben-header moringa-header">
+          <span>🌿</span>
+          <div><h3>Moringa Powder</h3><small>The Miracle Tree</small></div>
+        </div>
+        <div class="ben-list">
+          <div class="ben-item"><div class="bi-icon">🛡️</div><div><h4>Boost Immunity</h4><p>Contains 7× more Vitamin C than oranges and powerful antioxidants that strengthen your immune system.</p></div></div>
+          <div class="ben-item"><div class="bi-icon">💊</div><div><h4>Rich in Vitamins</h4><p>92 nutrients including Vitamins A, B, C, E, calcium, iron, and all 9 essential amino acids.</p></div></div>
+          <div class="ben-item"><div class="bi-icon">⚡</div><div><h4>Energy Booster</h4><p>Natural iron (3× more than spinach) and B-vitamins provide sustained, crash-free energy all day.</p></div></div>
+        </div>
+      </div>
+      <div class="ben-col reveal-r">
+        <div class="ben-header amla-header">
+          <span>🫐</span>
+          <div><h3>Amla Powder</h3><small>India's Superfruit</small></div>
+        </div>
+        <div class="ben-list">
+          <div class="ben-item"><div class="bi-icon amber-icon">💊</div><div><h4>Vitamin C Rich</h4><p>20× more Vitamin C than oranges. Boosts immunity, promotes collagen, and protects cells from damage.</p></div></div>
+          <div class="ben-item"><div class="bi-icon amber-icon">💆</div><div><h4>Hair &amp; Skin Care</h4><p>Strengthens hair follicles, reduces hair fall, prevents greying, and gives naturally radiant skin.</p></div></div>
+          <div class="ben-item"><div class="bi-icon amber-icon">🌀</div><div><h4>Improves Digestion</h4><p>Stimulates digestive enzymes, reduces acidity, relieves constipation, and promotes healthy gut flora.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ ABOUT -->
+<section class="section about-sec" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-l">
+        <div class="av-scene">
+          <span class="av-farmer">👨🏾‍🌾</span>
+          <div class="av-crops">🌾🌿🌾🌿🌾🌿🌾</div>
+          <div class="av-ground"></div>
+        </div>
+        <div class="av-floats">
+          <div class="avf avf1"><span>🌿</span><div><strong>500+</strong><small>Organic Farms</small></div></div>
+          <div class="avf avf2"><span>⭐</span><div><strong>50K+</strong><small>Happy Customers</small></div></div>
+          <div class="avf avf3"><span>🏆</span><div><strong>4+ Yrs</strong><small>of Trust</small></div></div>
+        </div>
+      </div>
+      <div class="about-content reveal-r">
+        <span class="sec-label">🌱 Our Story</span>
+        <h2 class="sec-h2" style="text-align:left;margin-bottom:14px">The <em>VITAMORA</em> Story</h2>
+        <p class="about-lead">"VITAMORA delivers pure and natural products directly from farmers to your home. We believe in quality, health, and trust."</p>
+        <div class="about-blocks">
+          <div class="ab"><div class="ab-icon">👨🏾‍🌾</div><div><h4>Farmer-First Philosophy</h4><p>We partner directly with 500+ organic farmers across India, ensuring fair wages, sustainable practices, and the freshest produce possible.</p></div></div>
+          <div class="ab"><div class="ab-icon">🌱</div><div><h4>100% Natural, Always</h4><p>No pesticides, no GMOs, no artificial additives. Every batch is lab-tested before it reaches your door.</p></div></div>
+          <div class="ab"><div class="ab-icon">💚</div><div><h4>Health is Our Mission</h4><p>We started Vitamora because we believe everyone deserves access to pure, affordable, and effective natural health products.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ WHY CHOOSE US -->
+<section class="section why-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">🏆 Why Us</span>
+      <h2 class="sec-h2">Why Choose <em>VITAMORA?</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="wc-icon">🌱</div><h3>100% Natural Products</h3><p>Grown without pesticides on certified organic farms. Pure from seed to shelf, always.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">🚜</div><h3>Direct from Farmers</h3><p>We cut out middlemen. Farmers earn more, you pay less, and quality stays uncompromised.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">🚫</div><h3>No Chemicals</h3><p>Zero artificial colors, flavors, or preservatives. What's on the label is all that's inside.</p></div>
+      <div class="why-card reveal"><div class="wc-icon">💰</div><h3>Affordable Pricing</h3><p>Premium quality at honest prices. Starting at just ₹250 for a 200g pack of pure goodness.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ REVIEWS -->
+<section class="section reviews-sec" id="reviews">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">💬 Testimonials</span>
+      <h2 class="sec-h2">What Customers <em>Say</em></h2>
+      <p class="sec-p">Real people, real results. Join 50,000+ happy Vitamora customers.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card reveal">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Very pure quality, I feel more energetic! I've been using Vitamora Moringa Powder for 3 months and the difference is incredible. My skin is glowing and I haven't fallen sick once."</p>
+        <div class="rc-author"><div class="rc-av">P</div><div><div class="rc-name">Priya Sharma</div><div class="rc-loc">Mumbai, Maharashtra</div><div class="rc-ver">✅ Verified Purchase</div></div></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Best moringa powder I have tried! As a fitness trainer, I recommend Vitamora to all my clients. The quality is unmatched and my digestion has improved dramatically."</p>
+        <div class="rc-author"><div class="rc-av">R</div><div><div class="rc-name">Rahul Verma</div><div class="rc-loc">Delhi, NCR</div><div class="rc-ver">✅ Verified Purchase</div></div></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"My hair fall has reduced by 70% after using Amla Powder for 2 months. The quality is pure and fresh. Best organic product I've ever used. Will definitely reorder!"</p>
+        <div class="rc-author"><div class="rc-av">A</div><div><div class="rc-name">Anita Patel</div><div class="rc-loc">Ahmedabad, Gujarat</div><div class="rc-ver">✅ Verified Purchase</div></div></div>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Ordered for my elderly parents and they love it. My father's blood pressure has stabilized and my mother's joint pain has reduced. Vitamora is now a permanent part of our household!"</p>
+        <div class="rc-author"><div class="rc-av">V</div><div><div class="rc-name">Vikram Malhotra</div><div class="rc-loc">Chandigarh, Punjab</div><div class="rc-ver">✅ Verified Purchase</div></div></div>
+      </div>
+    </div>
+    <!-- Rating summary -->
+    <div class="rating-bar reveal">
+      <div class="rb-score"><div class="rb-big">4.9</div><div class="rb-stars">★★★★★</div><div class="rb-count">Based on 4,217 reviews</div></div>
+      <div class="rb-bars">
+        <div class="rb-row"><span>5★</span><div class="rb-track"><div class="rb-fill" style="width:88%"></div></div><span>88%</span></div>
+        <div class="rb-row"><span>4★</span><div class="rb-track"><div class="rb-fill" style="width:8%;background:var(--g300)"></div></div><span>8%</span></div>
+        <div class="rb-row"><span>3★</span><div class="rb-track"><div class="rb-fill" style="width:3%;background:var(--g200)"></div></div><span>3%</span></div>
+        <div class="rb-row"><span>2★</span><div class="rb-track"><div class="rb-fill" style="width:1%;background:var(--gray200)"></div></div><span>1%</span></div>
+        <div class="rb-row"><span>1★</span><div class="rb-track"><div class="rb-fill" style="width:0%"></div></div><span>0%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-inner reveal">
+    <h2>Start Your Healthy Lifestyle Today</h2>
+    <p>Join 50,000+ people who've made Vitamora part of their daily wellness routine.</p>
+    <div class="cta-btns">
+      <a href="#products" class="btn btn-white btn-lg">🛒 Order Now</a>
+      <a href="https://wa.me/917225906842?text=Hi%2C%20I%20want%20to%20order%20from%20Vitamora!" target="_blank" class="btn btn-whatsapp btn-lg">💬 WhatsApp Order</a>
+    </div>
+  </div>
+</div>
+
+<!-- ▸ CONTACT -->
+<section class="section contact-sec" id="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">📞 Contact Us</span>
+      <h2 class="sec-h2">Get in <em>Touch</em></h2>
+      <p class="sec-p">Have questions? We're here to help. Reach out anytime.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal-l">
+        <div class="ci"><div class="ci-icon">📧</div><div><h4>Email</h4><a href="mailto:vitamora683@gmail.com">vitamora683@gmail.com</a></div></div>
+        <div class="ci"><div class="ci-icon">📞</div><div><h4>Phone</h4><a href="tel:+917225906842">+91 72259 06842</a></div></div>
+        <div class="ci"><div class="ci-icon">📍</div><div><h4>Address</h4><p>Sawariya Campus, Rao, Indore, MP</p></div></div>
+        <div class="ci"><div class="ci-icon">⏰</div><div><h4>Hours</h4><p>Mon–Sat, 9AM – 6PM IST</p></div></div>
+        <a href="https://wa.me/917225906842" class="btn-whatsapp-full" target="_blank">💬 Chat on WhatsApp</a>
+      </div>
+      <div class="cform-box reveal-r">
+        <h3>Send a Message</h3>
+        <form id="cForm">
+          <div class="fg"><label>Your Name *</label><input type="text" placeholder="Enter your name" required/></div>
+          <div class="fg"><label>Phone / Email *</label><input type="text" placeholder="+91 XXXXX XXXXX or email" required/></div>
+          <div class="fg"><label>Message</label><textarea placeholder="How can we help you?"></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">📨 Send Message</button>
+          <div class="form-ok" id="formOk">✅ Message sent! We'll reply within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▸ FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="ft-brand">
+      <div class="ft-logo">🌿 VITAMORA</div>
+      <p>Pure natural products from the heart of Indian farms. Organic, honest, and affordable. Farm to home since 2026.</p>
+      <div class="ft-certs"><span>✅ FSSAI</span><span>🌿 Organic</span><span>🔬 Lab Tested</span></div>
+      <div class="ft-social">
+        <a href="#" class="fts">📘</a><a href="#" class="fts">📸</a>
+        <a href="#" class="fts">🐦</a><a href="#" class="fts">▶️</a>
+      </div>
+    </div>
+    <div class="ft-col"><h4>Quick Links</h4><ul>
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li><li><a href="#contact">Contact</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Policies</h4><ul>
+      <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Refund Policy</a></li><li><a href="#">Shipping Policy</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:support@vitamora.com">📧 support@vitamora.com</a></li>
+      <li><a href="tel:+917225906842">📞 +91 72259 06842</a></li>
+      <li><span>📍 Sawariya Campus, Rao, Indore</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 VITAMORA. All rights reserved.</span>
+    <span>Made with 💚 for a healthier India</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917225906842" class="float-wa" target="_blank">💬 <span class="fwa-txt">WhatsApp Us</span></a>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
